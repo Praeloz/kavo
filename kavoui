@@ -192,7 +192,7 @@ function Kavo.CreateLib(kavName, themeList)
     table.insert(Kavo, kavName)
     for i,v in pairs(game.CoreGui:GetChildren()) do
         if v:IsA("ScreenGui") and v.Name == kavName then
-            v:Destroy()
+            v.Visible = false
         end
     end
     local ScreenGui = Instance.new("ScreenGui")
@@ -291,7 +291,7 @@ function Kavo.CreateLib(kavName, themeList)
 			Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X / 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y / 2))
 		}):Play()
         wait(1)
-        ScreenGui:Destroy()
+        ScreenGui.Visible = false
     end)
 
     MainSide.Name = "MainSide"
@@ -711,7 +711,7 @@ function Kavo.CreateLib(kavName, themeList)
                             c.ImageTransparency = c.ImageTransparency + 0.05
                             wait(len / 12)
                         end
-                        c:Destroy()
+                        c:Visible = false
                     else
                         for i,v in next, infoContainer:GetChildren() do
                             Utility:TweenObject(v, {Position = UDim2.new(0,0,2,0)}, 0.2)
@@ -1116,7 +1116,7 @@ function Kavo.CreateLib(kavName, themeList)
                                     c.ImageTransparency = c.ImageTransparency + 0.05
                                     wait(len / 12)
                                 end
-                                c:Destroy()
+                                c.Visible = false
                             else
                                 game.TweenService:Create(img, TweenInfo.new(0.11, Enum.EasingStyle.Linear,Enum.EasingDirection.In), {
                                     ImageTransparency = 1
@@ -1136,7 +1136,7 @@ function Kavo.CreateLib(kavName, themeList)
                                     c.ImageTransparency = c.ImageTransparency + 0.05
                                     wait(len / 12)
                                 end
-                                c:Destroy()
+                                c.Visible = false
                             end
                             toggled = not toggled
                             pcall(callback, toggled)
@@ -1537,7 +1537,7 @@ function Kavo.CreateLib(kavName, themeList)
                                 c.ImageTransparency = c.ImageTransparency + 0.05
                                 wait(len / 12)
                             end
-                            c:Destroy()
+                            c.Visible = false
                         else
                             opened = true
                             dropFrame:TweenSize(UDim2.new(0, 352, 0, UIListLayout.AbsoluteContentSize.Y), "InOut", "Linear", 0.08, true)
@@ -1559,7 +1559,7 @@ function Kavo.CreateLib(kavName, themeList)
                                 c.ImageTransparency = c.ImageTransparency + 0.05
                                 wait(len / 12)
                             end
-                            c:Destroy()
+                            c.Visible = false
                         end
                     else
                         for i,v in next, infoContainer:GetChildren() do
@@ -1761,7 +1761,7 @@ function Kavo.CreateLib(kavName, themeList)
                                 c.ImageTransparency = c.ImageTransparency + 0.05
                                 wait(len / 12)
                             end
-                            c:Destroy()         
+                            c.Visible = false         
                         else
                             for i,v in next, infoContainer:GetChildren() do
                                 Utility:TweenObject(v, {Position = UDim2.new(0,0,2,0)}, 0.2)
@@ -1806,7 +1806,7 @@ function Kavo.CreateLib(kavName, themeList)
                     newList = newList or {}
                     for i,v in next, dropFrame:GetChildren() do
                         if v.Name == "optionSelect" then
-                            v:Destroy()
+                            v.Visible = false
                         end
                     end
                     for i,v in next, newList do
@@ -1862,7 +1862,7 @@ function Kavo.CreateLib(kavName, themeList)
                                     c.ImageTransparency = c.ImageTransparency + 0.05
                                     wait(len / 12)
                                 end
-                                c:Destroy()         
+                                c.Visible = false         
                             else
                                 for i,v in next, infoContainer:GetChildren() do
                                     Utility:TweenObject(v, {Position = UDim2.new(0,0,2,0)}, 0.2)
@@ -2205,7 +2205,7 @@ function Kavo.CreateLib(kavName, themeList)
                                 c.ImageTransparency = c.ImageTransparency + 0.05
                                 wait(len / 12)
                             end
-                            c:Destroy()
+                            c.Visible = false
                         else
                             colorOpened = true
                             colorElement:TweenSize(UDim2.new(0, 352, 0, 141), "InOut", "Linear", 0.08, true)
@@ -2227,7 +2227,7 @@ function Kavo.CreateLib(kavName, themeList)
                                 c.ImageTransparency = c.ImageTransparency + 0.05
                                 wait(len / 12)
                             end
-                            c:Destroy()
+                            c.Visible = false
                         end
                     else
                         for i,v in next, infoContainer:GetChildren() do
